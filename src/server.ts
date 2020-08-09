@@ -1,9 +1,3 @@
-import express, { Request, Response } from 'express'
+import app from './app'
 
-const app = express()
-
-app.get('/', (request: Request, response: Response) => {
-    return response.json({ message:'bom dia' })
-})
-
-app.listen(8080)
+app.listen(process.env.PORT || 8080)
